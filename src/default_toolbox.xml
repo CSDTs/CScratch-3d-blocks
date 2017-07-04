@@ -283,6 +283,59 @@
         </shadow>
       </value>
     </block>
+    <block type="pen_sphere" id="pen_sphere">
+      <value name="RADIUS">
+        <shadow type="math_number">
+          <field name="NUM">50</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="pen_box" id="pen_box">
+      <value name="WIDTH">
+        <shadow type="math_number">
+          <field name="NUM">50</field>
+        </shadow>
+      </value>
+      <value name="HEIGHT">
+        <shadow type="math_number">
+          <field name="NUM">50</field>
+        </shadow>
+      </value>
+      <value name="DEPTH">
+        <shadow type="math_number">
+          <field name="NUM">50</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="pen_arc" id="pen_box">
+      <value name="WIDTH">
+        <shadow type="math_number">
+          <field name="NUM">50</field>
+        </shadow>
+      </value>
+      <value name="HEIGHT">
+        <shadow type="math_number">
+          <field name="NUM">50</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="pen_cylinder" id="pen_box">
+      <value name="TOP">
+        <shadow type="math_number">
+          <field name="NUM">50</field>
+        </shadow>
+      </value>
+      <value name="BOTTOM">
+        <shadow type="math_number">
+          <field name="NUM">50</field>
+        </shadow>
+      </value>
+      <value name="HEIGHT">
+        <shadow type="math_number">
+          <field name="NUM">100</field>
+        </shadow>
+      </value>
+    </block>
   </category>
   <category name="Data" colour="#FF8C1A" secondaryColour="#DB6E00" custom="VARIABLE"> +
   </category> +

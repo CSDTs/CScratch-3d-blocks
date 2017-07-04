@@ -1,4 +1,5 @@
-module.exports - Object.assign({},
+module.exports = Object.assign({},
     require('./motion'),
-    require('./looks')
+    require('./looks'),
+    require('./pen')
 );
