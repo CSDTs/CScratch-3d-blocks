@@ -1,12 +1,5 @@
 var ScratchBlocks = require('scratch-blocks');
 
-const commonProps = {
-    "category": ScratchBlocks.Categories.motion,
-    "colour": ScratchBlocks.Colours.motion.primary,
-    "colourSecondary": ScratchBlocks.Colours.motion.secondary,
-    "colourTertiary": ScratchBlocks.Colours.motion.tertiary
-};
-
 module.exports = {
     'motion_rotate': {
         /**
@@ -14,7 +7,7 @@ module.exports = {
          * @this ScratchBlocks.Block
          */
         init: function () {
-            this.jsonInit(Object.assign({
+            this.jsonInit({
                 "message0": "rotate by x: %1 y: %2 z: %3 degrees",
                 "args0": [
                     {
@@ -30,10 +23,9 @@ module.exports = {
                         "name": "DEGREESZ"
                     }
                 ],
-                "inputsInline": true,
-                "previousStatement": null,
-                "nextStatement": null
-            }, commonProps));
+                "category": ScratchBlocks.Categories.motion,
+                "extensions": ["colours_motion", "shape_statement"]
+            });
         },
     },
     'motion_setrotation': {
@@ -42,7 +34,7 @@ module.exports = {
          * @this ScratchBlocks.Block
          */
         init: function () {
-            this.jsonInit(Object.assign({
+            this.jsonInit({
                 "message0": "set rotation to x: %1 y: %2 z: %3 degrees",
                 "args0": [
                     {
@@ -58,10 +50,9 @@ module.exports = {
                         "name": "DEGREESZ"
                     }
                 ],
-                "inputsInline": true,
-                "previousStatement": null,
-                "nextStatement": null
-            }, commonProps));
+                "category": ScratchBlocks.Categories.motion,
+                "extensions": ["colours_motion", "shape_statement"]
+            });
         }
     },
     'motion_gotoxyz': {
@@ -70,7 +61,7 @@ module.exports = {
          * @this ScratchBlocks.Block
          */
         init: function () {
-            this.jsonInit(Object.assign({
+            this.jsonInit({
                 "message0": "go to x: %1 y: %2 z: %3",
                 "args0": [
                     {
@@ -86,10 +77,9 @@ module.exports = {
                         "name": "Z"
                     }
                 ],
-                "inputsInline": true,
-                "previousStatement": null,
-                "nextStatement": null
-            }, commonProps));
+                "category": ScratchBlocks.Categories.motion,
+                "extensions": ["colours_motion", "shape_statement"]
+            });
         }
     },
     'motion_changezby': {
@@ -98,7 +88,7 @@ module.exports = {
          * @this ScratchBlocks.Block
          */
         init: function () {
-            this.jsonInit(Object.assign({
+            this.jsonInit({
                 "message0": "change z by %1",
                 "args0": [
                     {
@@ -106,19 +96,18 @@ module.exports = {
                         "name": "DZ"
                     }
                 ],
-                "inputsInline": true,
-                "previousStatement": null,
-                "nextStatement": null
-            }, commonProps));
+                "category": ScratchBlocks.Categories.motion,
+                "extensions": ["colours_motion", "shape_statement"]
+            });
         }
     },
     'motion_setz': {
         /**
-         * Block to set Y.
+         * Block to set Z.
          * @this ScratchBlocks.Block
          */
         init: function () {
-            this.jsonInit(Object.assign({
+            this.jsonInit({
                 "message0": "set z to %1",
                 "args0": [
                     {
@@ -126,24 +115,23 @@ module.exports = {
                         "name": "Z"
                     }
                 ],
-                "inputsInline": true,
-                "previousStatement": null,
-                "nextStatement": null
-            }, commonProps));
+                "category": ScratchBlocks.Categories.motion,
+                "extensions": ["colours_motion", "shape_statement"]
+            });
         }
     },
     'motion_zposition': {
         /**
-         * Block to report Y.
+         * Block to report Z.
          * @this ScratchBlocks.Block
          */
         init: function () {
-            this.jsonInit(Object.assign({
+            this.jsonInit({
                 "message0": "z position",
-                "output": "Number",
-                "outputShape": ScratchBlocks.OUTPUT_SHAPE_ROUND,
-                "checkboxInFlyout": true
-            }, commonProps));
+                "category": ScratchBlocks.Categories.motion,
+                "checkboxInFlyout": true,
+                "extensions": ["colours_motion", "output_number"]
+            });
         }
     }
 };

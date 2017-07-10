@@ -137,6 +137,58 @@
     <block type="looks_costumeorder" id="looks_costumeorder"></block>
     <block type="looks_backdroporder" id="looks_backdroporder"></block>
     <block type="looks_backdropname" id="looks_backdropname"></block>
+    <block type="looks_setcamerato" id="looks_setcamerato">
+      <value name="X">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+      <value name="Y">
+        <shadow type="math_number">
+          <field name="NUM">50</field>
+        </shadow>
+      </value>
+      <value name="Z">
+        <shadow type="math_number">
+          <field name="NUM">500</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="looks_changecameraxby" id="looks_changecameraxby">
+      <value name="DX">
+        <shadow type="math_number">
+          <field name="NUM">10</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="looks_changecamerayby" id="looks_changecameraxby">
+      <value name="DY">
+        <shadow type="math_number">
+          <field name="NUM">10</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="looks_changecamerazby" id="looks_changecameraxby">
+      <value name="DZ">
+        <shadow type="math_number">
+          <field name="NUM">10</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="looks_turncameraaroundx" id="looks_changecameraxby">
+      <value name="DEGREES">
+        <shadow type="math_number">
+          <field name="NUM">10</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="looks_turncameraaroundy" id="looks_changecameraxby">
+      <value name="DEGREES">
+        <shadow type="math_number">
+          <field name="NUM">10</field>
+        </shadow>
+      </value>
+    </block>
   </category>
   <category name="Sound" colour="#D65CD6" secondaryColour="#BD42BD">
     <block type="sound_play" id="sound_play">

@@ -1,12 +1,5 @@
 var ScratchBlocks = require('scratch-blocks');
 
-const commonProps = {
-    "category": ScratchBlocks.Categories.pen,
-    "colour": ScratchBlocks.Colours.pen.primary,
-    "colourSecondary": ScratchBlocks.Colours.pen.secondary,
-    "colourTertiary": ScratchBlocks.Colours.pen.tertiary
-};
-
 module.exports = {
     'pen_sphere': {
         /**
@@ -14,7 +7,7 @@ module.exports = {
          * @this ScratchBlocks.Block
          */
         init: function () {
-            this.jsonInit(Object.assign({
+            this.jsonInit({
                 "message0": "sphere radius: %1",
                 "args0": [
                     {
@@ -22,9 +15,9 @@ module.exports = {
                         "name": "RADIUS"
                     }
                 ],
-                "previousStatement": null,
-                "nextStatement": null
-            }, commonProps));
+                "category": ScratchBlocks.Categories.pen,
+                "extensions": ["colours_pen", "shape_statement"]
+            });
         }
     },
     'pen_box': {
@@ -33,7 +26,7 @@ module.exports = {
          * @this ScratchBlocks.Block
          */
         init: function () {
-            this.jsonInit(Object.assign({
+            this.jsonInit({
                 "message0": "box width: %1 height: %2 depth: %3",
                 "args0": [
                     {
@@ -49,9 +42,9 @@ module.exports = {
                         "name": "DEPTH"
                     }
                 ],
-                "previousStatement": null,
-                "nextStatement": null
-            }, commonProps));
+                "category": ScratchBlocks.Categories.pen,
+                "extensions": ["colours_pen", "shape_statement"]
+            });
         }
     },
     'pen_arc': {
@@ -60,7 +53,7 @@ module.exports = {
          * @this ScratchBlocks.Block
          */
         init: function () {
-            this.jsonInit(Object.assign({
+            this.jsonInit({
                 "message0": "arc width: %1 height: %2",
                 "args0": [
                     {
@@ -72,9 +65,9 @@ module.exports = {
                         "name": "HEIGHT"
                     }
                 ],
-                "previousStatement": null,
-                "nextStatement": null
-            }, commonProps));
+                "category": ScratchBlocks.Categories.pen,
+                "extensions": ["colours_pen", "shape_statement"]
+            });
         }
     },
     'pen_cylinder': {
@@ -83,7 +76,7 @@ module.exports = {
          * @this ScratchBlocks.Block
          */
         init: function () {
-            this.jsonInit(Object.assign({
+            this.jsonInit({
                 "message0": "cylinder top: %1 bottom: %2 height: %3",
                 "args0": [
                     {
@@ -99,9 +92,9 @@ module.exports = {
                         "name": "HEIGHT"
                     }
                 ],
-                "previousStatement": null,
-                "nextStatement": null
-            }, commonProps));
+                "category": ScratchBlocks.Categories.pen,
+                "extensions": ["colours_pen", "shape_statement"]
+            });
         }
     },
     'pen_text': {
@@ -110,7 +103,7 @@ module.exports = {
          * @this ScratchBlocks.Block
          */
         init: function () {
-            this.jsonInit(Object.assign({
+            this.jsonInit({
                 "message0": "text %1 height: %2 depth: %3",
                 "args0": [
                     {
@@ -126,16 +119,9 @@ module.exports = {
                         "name": "DEPTH"
                     }
                 ],
-                "previousStatement": null,
-                "nextStatement": null
-            }, commonProps));
+                "category": ScratchBlocks.Categories.pen,
+                "extensions": ["colours_pen", "shape_statement"]
+            });
         }
     }
 };
-/*
-sphere radius: 50
-box width: 50 height: 50 depth: 50
-arc width: 100 height: 100
-cylinder top: 50 bottom: 50
-text [] size: 30 height: 3
-*/
